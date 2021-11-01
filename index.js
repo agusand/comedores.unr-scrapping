@@ -62,8 +62,6 @@ async function comprarTodosLosMenues({
 		await page.waitForSelector(".calendario-dia-turno");
 		await page.waitForTimeout(3000);
 
-		await page.screenshot({ path: "comedores5.jpg" });
-
 		if (isForNextMonth) {
 			await page.evaluate(() => {
 				const buttons = document.querySelectorAll(`.btn-transparente`);
